@@ -1,16 +1,91 @@
 ---
-
+import "../styles/styles.css";
+const phone = import.meta.env.PUBLIC_PHONE;
+const waLink = `https://wa.me/${phone}`;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seguridad Perimetral - Mar</title>
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Seguridad Perimetral Norte</h1>
+      <p>Instalación profesional de cercos y cámaras de seguridad</p>
+      <a href={waLink} target="_blank" class="btn">Pedí tu presupuesto</a>
+    </header>
+
+    <section class="servicios">
+      <h2>¿Qué ofrecemos?</h2>
+      <div class="cards">
+        <div class="card-flip">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-front-image">
+                <img src="/cercos_electricos.avif" alt="Cercos perimetrales" />
+              </div>
+              <h3>Cercos perimetrales</h3>
+              <p>Protegé tu hogar o empresa con cercos de calidad.</p>
+            </div>
+            <div class="card-back">
+              <h4>Instalación Cerco Eléctrico</h4>
+              <div class="card-back-content"> 
+              <p>
+                <ul>
+                  <li>Los electrificadores cumplen con la norma internacional IEC 60335-2-76 y también con lo dictado por la Asociación Electrotécnica Argentina y el Ente Nacional de Regulación Eléctrica (ENRE) Res. 579/76.</li>
+                  <li><strong>Un cerco eléctrico es un sistema de protección perimetral anti-intrusión LEGAL y NO LETAL para seres humanos y animales.</strong></li>
+                  <li>Los cercos eléctricos basan su funcionamiento en pulsos eléctricos de alto voltaje y baja corriente. Adicionalmente, en caso de detectar corte del alambrado o presión sobre él, se acciona una SIRENA DE ALARMA.</li>
+                  <li>Funciona con una BATERIA que en caso de corte de fluido eléctrico mantendrá el sistema operativo por un mínimo de 2 días.</li>
+                </ul>
+              </p>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-flip">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-front-image">
+              <img src="/camaras.avif" alt="Cámaras de seguridad" />
+            </div>
+              <h3>Cámaras de seguridad</h3>
+              <p>Monitoreo las 24hs con instalación profesional.</p>
+            </div>
+            <div class="card-back">
+              <p>
+                La tranquilidad de tenerlo todo vigilado es el principal motivo que lleva a muchos a instalar cámaras de seguridad en sus casas. Pero además, las cámaras de seguridad disuaden de los robos. No es una garantía plena, pero estos artefactos son una forma de ahuyentar a los ladrones, por lo que su entrada es menos probable.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="comentarios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <ul>
+        <li>"Excelente atención y servicio. Todo impecable." ⭐⭐⭐⭐⭐</li>
+        <li>"Puntuales, prolijos y muy buena disposición." ⭐⭐⭐⭐⭐</li>
+        <li>"Instalaron todo en un día, súper recomendables." ⭐⭐⭐⭐⭐</li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <p>Envianos tu consulta por WhatsApp</p>
+
+      <a class="btn" href={waLink} target="_blank">Escribir por WhatsApp</a>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 Seguridad Perimetral Norte</p>
+      <p>
+        Desarrollado por <a href="https://github.com/MarCortina" target="_blank"
+          >Marwizard</a>
+      </p>
+    </footer>
+  </body>
 </html>
