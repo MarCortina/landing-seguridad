@@ -54,14 +54,25 @@ const waLink = `https://wa.me/${phone}`;
               <p>Monitoreo las 24hs con instalación profesional.</p>
             </div>
             <div class="card-back">
+              <h4>Instalación Cámaras de Seguridad</h4>
+              <div class="card-back-content">
               <p>
                 La tranquilidad de tenerlo todo vigilado es el principal motivo que lleva a muchos a instalar cámaras de seguridad en sus casas. Pero además, las cámaras de seguridad disuaden de los robos. No es una garantía plena, pero estos artefactos son una forma de ahuyentar a los ladrones, por lo que su entrada es menos probable.
               </p>
             </div>
+            </div>
           </div>
         </div>
-
       </div>
+      <script>
+        document.querySelectorAll('.card-flip').forEach(card => {
+          card.addEventListener('click', function(e) {
+            const target = e.target;
+            if (target && target instanceof Element && target.closest('a')) return;
+            card.classList.toggle('flipped');
+          });
+        });
+      </script>
     </section>
 
     <section class="comentarios">
